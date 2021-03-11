@@ -1,0 +1,15 @@
+# Pre-order traversal
+
+# This program uses recursion to execute a pre-order traversal algorithm on this binary tree and its nodes
+def pre_order(index):
+    # This statement prints the current node of the binary tree that the algorithm is on, depending on its parameter
+    print(nodes[index]["Name"])
+    
+    # This if statement tells the function to call itself with the index of the left hand as the parameter node if
+    # one exists
+    if nodes[index]["Left"] >= 0:
+        pre_order(nodes[index]["Left"])
+        
+    # This if statement calls the function itself with the index of the right hand node as the parameter if one exists
+    if nodes[index]["Right"] >= 0:
+        pre_order(nodes[index]["Right"])
